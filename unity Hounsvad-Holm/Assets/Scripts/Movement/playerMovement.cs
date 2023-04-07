@@ -16,9 +16,25 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    
 
     void Update()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        Vector3 moveDir = new Vector3(x, 0, y);
+        rb.velocity = moveDir * speed;
+
+        if (x != 0 && x < 0)
+        {
+            sr.flipX = true;
+        }
+        else if (x != 0 && x > 0)
+        {
+            sr.flipX = false;
+        }
+    }
+
+    void FixedUpdate()
     {
         RaycastHit hit;
         Vector3 castPos = transform.position;
@@ -34,18 +50,6 @@ public class playerMovement : MonoBehaviour
             }
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        Vector3 moveDir = new Vector3(x, 0, y);
-        rb.velocity = moveDir * speed;
-
-        if (x != 0 && x < 0)
-        {
-            sr.flipX = true;
-        }
-        else if (x != 0 && x > 0)
-        {
-            sr.flipX = false;
-        }
+        
     }
 }
