@@ -6,6 +6,7 @@ public class itemPickup : MonoBehaviour
 {
     public Item Item;
 
+    //Scriptet skal på objektet som skal kunne samles op, sammen med "Item" scriptet.
 
     void Pickup()
     {

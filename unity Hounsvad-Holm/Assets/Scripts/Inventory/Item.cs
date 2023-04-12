@@ -5,8 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item",menuName ="Item/Create New Item")]
 public class Item : ScriptableObject
 {
+    //Scriptet laver en scriptable object
+
     public int id;
-    public string itemname;
+    public string itemName;
     public int value;
     public Sprite icon;
 

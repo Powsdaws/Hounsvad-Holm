@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Log
   m_EditorClassIdentifier: 
   id: 1
-  itemname: Log
+  itemName: Wood Log
   value: 10
   icon: {fileID: 21300000, guid: 09ff223decbe4a845982d9cc82a99422, type: 3}
